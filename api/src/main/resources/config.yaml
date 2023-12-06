@@ -1,5 +1,5 @@
 kumuluzee:
-  name: image-catalog-service
+  name: hike-service
   env:
     name: dev
   version: 1.0.0
@@ -8,19 +8,19 @@ kumuluzee:
     http:
       port: 8080
   datasources:
-    - jndi-name: jdbc/ImageMetadataDS
-      connection-url: jdbc:postgresql://localhost:5432/image-metadata
+    - jndi-name: jdbc/HikeDS
+      connection-url: jdbc:postgresql://localhost:5432/hike
       username: dbuser
       password: postgres
   health:
-    checks:
-      data-source-health-check:
-        type: liveness
-        jndi-name: jdbc/ImageMetadataDS
+    #checks:
+      #data-source-health-check:
+        #type: liveness
+        #jndi-name: jdbc/ImageMetadataDS
   metrics:
     web-instrumentation:
-      - name: images-endpoint
-        url-pattern: /v1/images/*
+      - name: hike-endpoint
+        url-pattern: /v1/hikes/*
 rest-properties:
   broken: false
 

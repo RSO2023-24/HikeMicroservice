@@ -1,7 +1,7 @@
-package si.fri.rso.samples.imagecatalog.services.config;
+package si.fri.rso.samples.hikecatalog.services.config;
 import javax.enterprise.context.ApplicationScoped;
 import com.kumuluz.ee.configuration.cdi.ConfigBundle;
-import com.kumuluz.ee.configuration.cdi.ConfigValue;
+
 @ConfigBundle("rest-properties")
 @ApplicationScoped
 public class RestProperties {

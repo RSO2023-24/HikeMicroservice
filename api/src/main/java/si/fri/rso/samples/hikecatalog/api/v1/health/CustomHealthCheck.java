@@ -1,9 +1,10 @@
-package si.fri.rso.samples.imagecatalog.api.v1.health;
+/*
+package si.fri.rso.samples.hikecatalog.api.v1.health;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.Liveness;
-import si.fri.rso.samples.imagecatalog.services.config.RestProperties;
+import si.fri.rso.samples.hikecatalog.services.config.RestProperties;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -25,3 +26,4 @@ public class CustomHealthCheck implements HealthCheck {
         }
     }
 }
+ */
