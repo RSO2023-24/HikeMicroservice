@@ -1,45 +1,34 @@
-package si.fri.rso.samples.hikecatalog.models.entities;
+package si.fri.rso.samples.hikecatalog.lib;
 
-import javax.persistence.*;
 import java.time.Instant;
-import java.util.List;
 
-@Entity
-@Table(name = "hike_metadata")
-@NamedQueries(value =
-        {
-                @NamedQuery(name = "HikeEntity.getAll",
-                        query = "SELECT h FROM HikeEntity h")
-        })
-public class HikeEntity {
+public class HikeMetadataTest {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column(name = "length")
+    private Integer hikeId;
+    private String name; // Added a name field
     private Double length; // in kilometers
-
-    @Column(name = "difficulty")
+    private Double duration; // in hours
     private Integer difficulty; // scale from 1 to 10
-
-    @Column(name = "starting_latitude")
     private Double startingLatitude;
-
-    @Column(name = "starting_longitude")
     private Double startingLongitude;
-
-    @Column(name = "created")
     private Instant created;
 
     // Getters and setters for all fields
 
-    public Integer getId() {
-        return id;
+    public Integer getHikeId() {
+        return hikeId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setHikeId(Integer hikeId) {
+        this.hikeId = hikeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getLength() {
@@ -48,6 +37,14 @@ public class HikeEntity {
 
     public void setLength(Double length) {
         this.length = length;
+    }
+
+    public Double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Double duration) {
+        this.duration = duration;
     }
 
     public Integer getDifficulty() {
